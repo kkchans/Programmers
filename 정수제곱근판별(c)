@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <math.h>
+
+long long solution(long long n) {
+    long long answer = 0;
+    double du = n;
+    double du2 = sqrt(du);
+    if(du2 == (int)du2) 
+        answer = pow(du2+1,2);
+    else
+        answer = -1;
+    return answer;
+}
