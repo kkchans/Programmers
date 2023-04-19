@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+class Solution {
+    public int solution(int[] numbers) {
+        int answer = 0;
+        Arrays.sort(numbers);
+
+        for(int i = 0, k = 0; i < numbers.length; i++, k++) {
+            System.out.println(k + " ||  " + numbers[i]);
+                if(k != numbers[i]) {
+                    System.out.println(k + " \\  " + numbers[i]);
+                    answer+=k;
+                    i--;
+                }
+        }
+        int k = numbers[numbers.length-1];
+        for(int i = k+1; i <= 9; i++){
+            answer+=i;
+        }
+        return answer;
+    }
+}
