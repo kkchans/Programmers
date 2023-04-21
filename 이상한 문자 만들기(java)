@@ -1,0 +1,22 @@
+import java.util.*;
+
+class Solution {
+    public String solution(String s) {
+        s = s.toLowerCase();
+        String answer = "";
+        String[] str = s.split("");
+        
+        int k = 0;
+        for(String ss : str) {
+            if(k % 2 == 0) {
+                answer+=ss.toUpperCase();
+            }
+            else { answer+=ss;}
+            k++;
+        }
+      
+        
+        
+        return answer;
+    }
+}
