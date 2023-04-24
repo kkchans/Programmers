@@ -2,16 +2,22 @@ import java.util.*;
 
 class Solution {
     public String solution(String s) {
-        s = s.toLowerCase();
+      //  s = s.toLowerCase();
         String answer = "";
         String[] str = s.split("");
         
         int k = 0;
         for(String ss : str) {
-            if(k % 2 == 0) {
+            if(ss.contains(" ")) {
+                answer+=ss.toLowerCase();
+                k=1;
+            }
+            else if(k % 2 == 0) {
                 answer+=ss.toUpperCase();
             }
-            else { answer+=ss;}
+            else if(k % 2 == 1) {
+                answer+=ss.toLowerCase();
+            }
             k++;
         }
       
