@@ -6,7 +6,23 @@ class Solution {
             char ch = s.charAt(i);
             
             if(Character.isLowerCase(ch)) {
-                ch = (char) ((ch-65+n)%26+'a');
+                if(ch+n > 'z') {
+                    answer += (char)(ch+n-26);
+                }
+                else {
+                    answer += (char)(ch+n);
+                }
+            }
+            else if(ch == ' ') {
+                answer += ch;
+            }
+            else {
+                if(ch+n > 'Z') {
+                    answer+=(char)(ch+n-26);
+                }
+                else {
+                    answer+=(char)(ch+n);
+                }
             }
         }
         
